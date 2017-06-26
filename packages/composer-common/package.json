@@ -18,7 +18,7 @@
     "doc": "jsdoc --pedantic --recurse -c jsdoc.conf",
     "postdoc": "npm run browserify",
     "browserify": "browserify ./index.js -t [ babelify --presets [ latest ] ] > ./out/composer-common.js",
-    "test": "node ./scripts/api-changelog.js && nyc mocha --recursive -t 5000"
+    "test": "node ./scripts/api-changelog.js && nyc mocha --recursive -t 10000"
   },
   "repository": {
     "type": "git",
@@ -114,9 +114,9 @@
     ],
     "all": true,
     "check-coverage": true,
-    "statements": 96,
-    "branches": 91,
+    "statements": 97,
+    "branches": 93,
     "functions": 97,
-    "lines": 96
+    "lines": 97
   }
 }
