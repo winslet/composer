@@ -245,7 +245,7 @@ $callout: #FFD640;
 
     .content-chunk {
       margin-left: 2rem;
-      max-width: 750px;
+      // max-width: 750px;
       margin-top: 5vh;
       margin-bottom: 3rem;
 
@@ -265,6 +265,12 @@ $callout: #FFD640;
     .content {
       .page-content-grid {
         .content-chunk {
+
+          p, h1, h2, h3, h4, blockquote, ul, image, ol, table {
+            margin-right: 60%;
+            clear: both;
+          }
+
 
           p {
             margin-top: 1.3rem;
@@ -293,15 +299,36 @@ $callout: #FFD640;
 
           h2 {
             margin-top: 2rem;
+            padding-top: 4rem; // 2rem
+            font-size: 1.6rem;
           }
 
           h3 {
             font-family: $font-stack;
-            font-weight: 300;
-            font-size: 1.2rem;
+            font-weight: 600; // 300
+            font-size: 1rem; // 1.2rem
             line-height: 130%;
             color: $primary-text;
-            margin-top: 2rem;
+            margin-top: 4rem;
+          }
+
+          h4 {
+            font-family: $font-stack;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: $secondary-text;
+          }
+
+          h5 {
+            float: right;
+            position: relative;
+            clear: right;
+            box-sizing: border-box;
+            width: 50%;
+            margin-right: 1rem;
+            margin-bottom: 3rem;
+            margin-top: -2rem;
+            color: $secondary-text;
           }
 
           blockquote {
@@ -314,11 +341,12 @@ $callout: #FFD640;
           }
 
           pre {
-            background-color: #272B36;
-            padding: 1rem;
+            background-color: #272B36; // make variable
+            // padding: 1rem;
             color: white;
             border-radius: 4px;
             padding-right: 4rem;
+            margin-top: 0px;
 
             code {
               padding-right: 35px;
@@ -512,16 +540,6 @@ $callout: #FFD640;
         grid-column-start: 1;
         grid-column-end: 6;
         overflow-y: auto;
-
-        // #off-canvas {
-        //     position: fixed; /* or choose `absolute` depending on desired behavior*/
-        //     top: 0;
-        //     bottom: 0;
-        //     width: 300px;
-        //     left: -340px;
-        //     transition: transform .3s ease-in-out;
-        // }
-
       }
 
       .page-content-grid {
@@ -535,18 +553,33 @@ $callout: #FFD640;
       }
     }
 
-    // .toggle {
-    //   display: inline-block;
-    //   }
-    //
-    //   #nav:target {
-    //   transform: translateX(340px);
-    // }
-
     }
 
 // CSS Styles for Code highlighting
-.highlight { border-radius: 4px; position: relative;}
+.highlight {
+  border-radius: 4px;
+  position: relative;
+  float: right;
+  clear: right;
+  box-sizing: border-box;
+  width: 50%;
+  margin-top: -2rem;
+  margin-right: 1rem;
+  // &::selection, ::-moz-selection {
+  //   background-color: red;
+  // }
+
+}
+
+.dark-box {
+  width: 40%;
+  background-color: #272B36; // find variable
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .highlight .hll { background-color: #424242 }
 // .highlight  { background: #000000; color: #eaeaea }
 .highlight .c { color: #969896 } /* Comment */
@@ -641,8 +674,8 @@ copy-button {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  // border-top-right-radius: 4px;
+  // border-bottom-right-radius: 4px;
   transition: 0.4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
   line-height: 1rem;
   &:hover {

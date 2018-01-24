@@ -43,6 +43,8 @@ index-order: {{index}}
 {% endfor %}
 {% endif %}
 
+---
+
 # Method Details
 {% for method in methods %}
 {% if method.name == 'constructor'%}
@@ -57,7 +59,7 @@ _{{method.return.type}} {{method.name}}( {% for args in method.parameters %}{% i
 {% endfor %}
 
 {% if method.example %}
-### Example
+##### Example
 ```javascript
 {{method.example}}
 ```
@@ -104,12 +106,14 @@ No parameters
 {% endif %}
 
 {% if method.example %}
-### Example
+##### Example
 ```javascript
 {{method.example}}
 ```
 {% endif %}
-{% endfor %} 
+{% endfor %}
+
+---
 
 ##Inherited methods
 
@@ -129,7 +133,7 @@ _{{method.returnType}} {{method.name}}( {% for args in method.parameters %}{% if
 {% endfor %}
 
 {% if method.example %}
-### Example
+##### Example
 ```javascript
 {{method.example}}
 ```
@@ -176,9 +180,9 @@ No parameters
 {% endif %}
 
 {% if method.example %}
-### Example
+##### Example
 ```javascript
 {{method.example}}
 ```
 {% endif %}
-{% endfor %} 
+{% endfor %}
