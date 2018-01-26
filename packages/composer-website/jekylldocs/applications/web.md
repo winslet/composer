@@ -25,7 +25,8 @@ The flow for building an Angular application is as such:
 The reference instructions below are for if you already have a Business Network Archive and would like to build a skeleton Angular application, if you would like to fully understand how to develop a BNA and build an application from there please see the developer tutorial.
 
 **Prerequisites**
-You will need the Composer [development tools](../installing/development-tools.html) in order to run the Angular generator.
+- You will need the Composer [development tools](../installing/development-tools.html) in order to run the Angular generator.
+- A Business Network Archive (.BNA) you would like to deploy.
 
 ### 1. Start Fabric running on your local machine
 
