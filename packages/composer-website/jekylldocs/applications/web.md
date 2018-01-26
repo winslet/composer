@@ -97,7 +97,7 @@ The rest server will then be generated and available on http://localhost:3000/ex
 
 ### 6. Generate the Angular application
 
-The Angular application requires the rest server to be running to connect to the Fabric instance. Make sure you have the REST server running in the background when doing this.
+The Angular application requires the rest server to be running to connect to the Fabric instance. Make sure you have the REST server running in the background when doing this. You will also need to be in the same directory as your .BNA file when running Yo.
 
 ```bash
 yo hyperledger-composer
